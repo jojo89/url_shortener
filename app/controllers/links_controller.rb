@@ -5,6 +5,7 @@ class LinksController < ApplicationController
   
   def create
     new_link
+    base_url
     render "_link_list_item.html.erb", layout: false
   end
 
@@ -15,6 +16,7 @@ class LinksController < ApplicationController
   end
   
   def index
+    base_url
     top_link
   end
 
@@ -23,6 +25,10 @@ class LinksController < ApplicationController
   def short_url
     find_link
     @link.original_url
+  end
+  
+  def base_url
+    @base_url = URI(request.base_url).host
   end
   
   def new_link

@@ -1,0 +1,29 @@
+body{
+  color: black;
+  text-align: center;
+  font-family: Futura, 'Trebuchet MS', Arial, sans-serif;
+}
+h1{
+  font-size: 65px;
+}
+a{
+  color: black;
+  text-decoration: none;
+}
+b{
+  font-size: 10px;
+}
+li{
+  font-size: 16px;
+}
+.container {
+  margin: 20px auto;
+  width: 600px;
+  padding: 0px 20px 20px 20px;
+  position: relative;
+  top: 20px;
+}
+ul
+{
+    list-style-type: none;
+}

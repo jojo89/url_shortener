@@ -1,5 +1,6 @@
+<h3>Hot Hundred</h3>
 <ul>
 <% @links.each do |link| %>
-  <li><b><%=link.original_url%></b> - <%=link.shortened_url(request.base_url)%> </li>
+  <li><b><%=link.original_url%></b> - <a href=<%= link.original_url %> ><%=link.shortened_url(@base_url)%></a></li>
   <% end %>
 </ul>

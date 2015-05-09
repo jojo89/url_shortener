@@ -4,6 +4,7 @@ class Link
     field :short_url, type: String
     field :access_count, type: Integer, default: 0
     after_initialize :create_short_extension
+    validates_format_of :original_url, with: URI.regexp
     validates_uniqueness_of :original_url
     validates_uniqueness_of :short_url
     
@@ -20,6 +21,11 @@ class Link
   def increment_access_count
     self.access_count = access_count + 1
     self.save!
+  end
+
+  def domain
+    puts original_url
+    URI(original_url).host if original_url
   end
   
   def all_attributes(base_url)

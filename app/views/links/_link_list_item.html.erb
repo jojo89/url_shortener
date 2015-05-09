@@ -1,4 +1,4 @@
 
 <li>
-  tiny url <a href=<%= @link.shortened_url(request.base_url) %> ><%= @link.shortened_url(request.base_url) %>
+  tiny url <a href=<%= @link.original_url %> ><%= @link.shortened_url(@base_url) %>
 </li>

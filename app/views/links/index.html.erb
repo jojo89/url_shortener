@@ -1,0 +1,5 @@
+<ul>
+<% @links.each do |link| %>
+  <li><b><%=link.original_url%></b> - <%=link.shortened_url(request.base_url)%> </li>
+  <% end %>
+</ul>

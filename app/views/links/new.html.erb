@@ -1,0 +1,8 @@
+<%= link_to("100 Hottest Link", "/links") %>
+<ul>
+</ul>
+<%= form_tag("/links", method: "post", id: "new-link") do %>
+  <%= label_tag(:original_url, "Link:") %>
+   <%= text_field_tag(:original_url) %>
+   <%= submit_tag("Make it small") %>
+<% end %>

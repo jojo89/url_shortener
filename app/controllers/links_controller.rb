@@ -6,7 +6,11 @@ class LinksController < ApplicationController
   def create
     new_link
     base_url
-    render "_link_list_item.html.erb", layout: false
+    if !@link.errors.messages.empty?
+      render "_link_errors.html.erb", layout: false
+    else
+      render "_link_list_item.html.erb", layout: false
+    end
   end
 
   def redirect

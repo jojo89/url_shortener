@@ -12,6 +12,7 @@ gem 'coffee-rails', '~> 4.1.0'
 
 gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
 gem 'bson_ext'
+gem 'mongoid_token'
 # See https://github.com/rails/execjs#readme for more supported runtimes
 # gem 'therubyracer', platforms: :ruby
 

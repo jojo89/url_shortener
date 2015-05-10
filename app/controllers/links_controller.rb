@@ -44,6 +44,10 @@ class LinksController < ApplicationController
   end
 
   def top_link
-    @links = Link.order_by(:access_count => 'desc').limit(100).to_a
+    @links = Link.most_visited(limit)
+  end
+
+  def limit
+    100
   end
 end

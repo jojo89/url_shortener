@@ -15,8 +15,12 @@ class LinksController < ApplicationController
 
   def redirect
     find_link
-    @link.increment_access_count
-    redirect_to short_url
+    if @link 
+      @link.increment_access_count
+      redirect_to short_url
+    else
+      render file: "#{Rails.root}/public/404.html", layout: false, status: 404
+    end
   end
   
   def index
@@ -40,7 +44,7 @@ class LinksController < ApplicationController
   end
 
   def find_link
-    @link = Link.find_by(short_url: params[:sha])
+    @link = Link.find(params[:token])
   end
 
   def top_link

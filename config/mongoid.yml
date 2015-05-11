@@ -14,6 +14,8 @@ production:
         # safe: true
         # skip_version_check: true
 test:
+  options:
+    raise_not_found_error: false
   sessions:
     default:
       database: url_shortener_test

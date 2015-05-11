@@ -14,7 +14,7 @@ Rails.application.routes.draw do
   # Example resource route (maps HTTP verbs to controller actions automatically):
     resources :links
     post 'links/' => 'links#create'
-    get 'l/:sha' => 'links#redirect'
+    get 'l/:token' => 'links#redirect'
 
   # Example resource route with options:
   #   resources :products do

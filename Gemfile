@@ -10,7 +10,7 @@ gem 'uglifier', '>= 1.3.0'
 # Use CoffeeScript for .coffee assets and views
 gem 'coffee-rails', '~> 4.1.0'
 gem 'database_cleaner'
-gem 'mongoid', '~> 4', github: 'mongoid/mongoid'
+gem 'mongoid'
 gem 'bson_ext'
 gem 'mongoid_token'
 gem 'pry'

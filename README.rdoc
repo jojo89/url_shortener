@@ -1,28 +1,66 @@
-== README
+# Url Shortener
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+##dependencies
+* Ruby version ruby "2.2.1"
+* mongodb
 
-Things you may want to cover:
+### install mongodb with homebrew
 
-* Ruby version
+```
+$ brew update
+```
 
-* System dependencies
+```
+$ brew install mongodb
+```
 
-* Configuration
+```
+$ mkdir -p /data/db
+```
 
-* Database creation
+```
+$ cd /data/db
+```
 
-* Database initialization
+```
+$ mongod 
+```
 
-* How to run the test suite
+### Development
 
-* Services (job queues, cache servers, search engines, etc.)
+from the directory you would like to store the project.
 
-* Deployment instructions
+```
+$ git clone git@github.com:jojo89/url_shortener.git
+```
 
-* ...
+```
+$ cd url_shortener
+```
 
+```
+$ bundle install
+```
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+```
+$ rails s
+```
+ 
+### Test
+
+ to run all specs 
+```
+$ bundle exec rspec
+```
+to run an individual spec do the same,but add the file extentsion
+
+ i. e.
+```
+$ bundle exec rspec spec/controllers/links_controller_spec.rb
+```
+
+### production
+Make sure all changes are checked in.
+```
+$ git push heroku master
+```

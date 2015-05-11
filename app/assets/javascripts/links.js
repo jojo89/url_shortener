@@ -1,11 +1,13 @@
 $( document ).ready(function() {
   $("#new-link").on("submit", function(event){
     event.preventDefault();
-    $('li').remove()
     var url = $(this).attr("action")
-    value = $('#original_url').val()
-    $.post( url, { original_url: value }, function( data ) {
-      $("ul").append(data);
-    });  
+    setTimeout(function(){ 
+      $('li').remove()
+      value = $('#original_url').val()
+      $.post( url, { original_url: value }, function( data ) {
+        $("ul").append(data);
+      });  
+     }, 500);
   });
 });

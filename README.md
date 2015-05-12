@@ -62,16 +62,11 @@ $ bundle exec rspec spec/controllers/links_controller_spec.rb
 ```
 
 ### production
-Make sure all changes are checked in.
-```
-$ git push heroku master
-```
+
 project is hosted at https://shortenerd.herokuapp.com/
 
 
 ### Notes 
-
-
   I decided to make this project a rails app because I find it the easiest framework to build a proof of concept
 quickly, but it also gives you everything you need to make the mvp into a product. I used Mongo for my database.
 I felt like it was a good choice for the sake of speed and scalability. since the app doesn't require a user to login,
@@ -96,16 +91,18 @@ being it's the most well supported ruby testing suite and I know it pretty well.
 
 1.  the user visits the tiny url. (The tiny url is a unique token generate for each url concatenated to the application url and "/l/")
 2.  The url is then found by it's token and redirects to the original url
-3.  If the token doesn't exsist in the db it returns a 404
+3.  If the token doesn't exist in the db it returns a 404
 
 ### Struggles
   The two biggest struggles I've had is first preventing the form from submitting and coming up with a 
   way to get a short unique index for the tiny url. I couldn't use mongo's uid because it's so long that it
   defeats the purpose of the tiny url. luckily I found a great gem called mongo_token that gave me just that. 
-  As for the form being prematurely submiitted I wrapped the ajax call in a setTimeout. It didn't feel good.
+  As for the form being prematurely submitted I wrapped the ajax call in a setTimeout. It didn't feel good.
   but it got the job done.
 
 ### Possible Expansion
  I'd like to deploy it like a big boy without heroku. I haven't done a lot of ops stuff, so I think it
- could be a good oppurtunity to learn. I also think the app is simple enough I could move the front-end into 
+ could be a good opportunity to learn. I also think the app is simple enough I could move the front-end into 
  an angular application and just use rails as an api.
+
+

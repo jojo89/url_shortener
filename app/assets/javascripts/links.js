@@ -2,12 +2,10 @@ $( document ).ready(function() {
   $("#new-link").on("submit", function(event){
     event.preventDefault();
     var url = $(this).attr("action")
-    setTimeout(function(){ 
-      $('li').remove()
-      value = $('#original_url').val()
-      $.post( url, { original_url: value }, function( data ) {
-        $("ul").append(data);
-      });  
-     }, 500);
+    $('li').remove()
+    value = $('#original_url').val()
+    $.post( url, { original_url: value }, function( data ) {
+      $("ul").append(data);
+    });  
   });
 });

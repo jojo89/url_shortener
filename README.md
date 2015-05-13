@@ -97,9 +97,9 @@ being it's the most well supported ruby testing suite and I know it pretty well.
   The two biggest struggles I've had is first preventing the form from submitting and coming up with a 
   way to get a short unique index for the tiny url. I couldn't use mongo's uid because it's so long that it
   defeats the purpose of the tiny url. luckily I found a great gem called mongo_token that gave me just that. 
-  As for the form being prematurely submitted I wrapped the ajax call in a setTimeout. It didn't feel good.
-  but it got the job done.
-
+  As for the form being prematurely submitted It has been behaving lately, but I think the best solution would be using a framework
+  with two-way data binding.
+  
 ### Possible Expansion
  I'd like to deploy it like a big boy without heroku. I haven't done a lot of ops stuff, so I think it
  could be a good opportunity to learn. I also think the app is simple enough I could move the front-end into 
